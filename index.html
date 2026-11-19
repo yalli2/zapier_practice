@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zap 연습장 — Claude와 함께 배우는 Zapier 자동화 퀘스트</title>
+<meta name="description" content="Zapier의 핵심 기능을 하나씩 따라 하며 체험하고, Claude와 협업하는 방법까지 익히는 인터랙티브 연습 사이트">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="미션 목록 열기">☰</button>
+  <a class="brand" href="#home" data-go="home"><span class="bolt">⚡</span><span><b>Zap 연습장</b><small>with Claude</small></span></a>
+  <nav class="topnav">
+    <a href="#home" data-go="home">홈</a>
+    <a href="#prompts" data-go="prompts">프롬프트 도서관</a>
+    <a href="#glossary" data-go="glossary">용어 사전</a>
+    <a href="#facts" data-go="facts">요금·한도 메모</a>
+  </nav>
+  <div class="xpbox" title="경험치">
+    <span class="lv" id="lvBadge">Lv.1</span>
+    <div class="xpbar"><i id="xpFill"></i></div>
+    <span class="xptext" id="xpText">0 XP</span>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-progress">
+      <div class="ring" id="ring"><span id="ringText">0%</span></div>
+      <div><b id="doneCount">0 / 0</b><small>미션 완료</small></div>
+    </div>
+    <div id="missionNav"></div>
+    <button class="reset-btn" id="resetBtn">↺ 진행 상황 초기화</button>
+  </aside>
+  <main class="main" id="main"></main>
+</div>
+
+<button class="claude-fab" id="claudeFab" title="Claude 도우미"><span class="claude-dot">✻</span> Claude 도우미</button>
+<div class="claude-panel" id="claudePanel" hidden>
+  <div class="cp-head"><span class="claude-dot">✻</span><b>Claude 도우미</b><button id="cpClose" aria-label="닫기">✕</button></div>
+  <div class="cp-body" id="cpBody"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<canvas id="confetti"></canvas>
+
+<script src="js/data.js"></script>
+<script src="js/labs.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
